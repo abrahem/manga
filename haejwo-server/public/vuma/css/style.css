@@ -319,7 +319,7 @@ ul li {
     background: #fff;
 }
 .ios .toolbar a.tab-link.tab-link-active {
-    color: #94D439 !important;
+    color: rgba(103, 58, 183); !important;
 }
 .ios .toolbar .toolbar-inner {
     padding: 0 15px;
@@ -1637,7 +1637,7 @@ a.sortable-toggle i {
     height: 30px;
     line-height: 30px;
     color: #fff;
-    background: #94D439;
+    background: rgba(103, 58, 183);
     cursor: pointer;
     border-radius: 50%;
 }
