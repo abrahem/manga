@@ -10,7 +10,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,500i,700,900" rel="stylesheet">
 	<link rel="stylesheet" href="css/framework7.bundle.css">
 	<link rel="stylesheet" href="css/fontawesome.min.css">
-	<link rel="stylesheet" href="css/">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,20 +17,20 @@
    <div class="page">
 	<div class="page-content">
 		<script>
-var url_string = window.location.href;
-var url = new URL(url_string);
-var c = url.searchParams.get("email");
-var data = c;
-if (data == "") {
-app.dialog.alert("لا تملك حساب يجب عليك تسجيل الدخول أو انشاء حساب لمشاهدة ملفك الشخص");
-} else {
-app.request.get('https://snoanime.com/api/x/profile.php/?email='+c, function (data) {
-var obj = JSON.parse(data);
-document.getElementById("name").innerText = obj[0].name;
-document.getElementById("title").innerText = obj[0].title;
-document.getElementById("views").innerText = obj[0].views;
-}
-});
+              var url_string = window.location.href;
+              var url = new URL(url_string);
+              var c = url.searchParams.get("email");
+              var data = c;
+              if (data == "") {
+              app.dialog.alert("لا تملك حساب يجب عليك تسجيل الدخول أو انشاء حساب لمشاهدة ملفك الشخص");
+              } else {
+              app.request.get('https://snoanime.com/api/x/profile.php/?email='+c, function (data) {
+              var obj = JSON.parse(data);
+              document.getElementById("name").innerText = obj[0].name;
+              document.getElementById("title").innerText = obj[0].title;
+              document.getElementById("views").innerText = obj[0].views;
+              }
+           });
 		</script>
 		<!-- profile -->
 		<div class="segments-page">
