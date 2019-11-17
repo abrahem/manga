@@ -21,11 +21,16 @@
 var url_string = window.location.href;
 var url = new URL(url_string);
 var c = url.searchParams.get("email");
+var data = c;
+if (data == "") {
+app.dialog.alert("لا تملك حساب يجب عليك تسجيل الدخول أو انشاء حساب لمشاهدة ملفك الشخص");
+} else {
 app.request.get('https://snoanime.com/api/x/profile.php/?email='+c, function (data) {
 var obj = JSON.parse(data);
 document.getElementById("name").innerText = obj[0].name;
 document.getElementById("title").innerText = obj[0].title;
 document.getElementById("views").innerText = obj[0].views;
+}
 });
 		</script>
 		<!-- profile -->
