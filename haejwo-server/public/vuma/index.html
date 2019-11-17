@@ -17,7 +17,17 @@
 	<div id="app">
    <div class="page">
 	<div class="page-content">
-		
+		<script>
+			var url_string = window.location.href;
+                        var url = new URL(url_string);
+                        var c = url.searchParams.get("email");
+			app.request.get('http://blog.snoanime.com/profile.php/?'+c+', function (data) {
+                        var obj = JSON.parse(data);
+			  document.getElementById("name").innerText = obj[0].name;
+			  document.getElementById("title").innerText = obj[0].title;
+			  document.getElementById("views").innerText = obj[0].views;
+                         });
+		</script>
 		<!-- profile -->
 		<div class="segments-page">
 			<div class="container">
@@ -28,8 +38,8 @@
 								<img src="https://simg.nicepng.com/png/small/381-3815648_drv3-boys-icons-2-2-free-to-use.png" alt="">
 							</div>
 							<div class="profile-name">
-								<h4>ألاسم</h4>
-								<span>الوصف</span>
+								<h4 id="name"></h4>
+								<span id="title"></span>
 							</div>
 						</div>
 						<div class="profile-button">
@@ -59,7 +69,7 @@
 								</div>
 								<div class="col-33">
 									<div class="content">
-										<h5>0</h5>
+										<h5 id="views"></h5>
 										<span>شخص شاهد حسابك</span>
 									</div>
 								</div>
