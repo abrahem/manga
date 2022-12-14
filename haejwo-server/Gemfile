@@ -28,7 +28,7 @@ gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.3'
 gem 'rails-i18n'
 gem 'railroady'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.1', '>= 5.1.0'
 gem 'sendgrid-ruby'
 gem 'sendgrid-actionmailer'
 gem 'tinymce-rails'
@@ -44,7 +44,7 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 3.7.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "capistrano", "~> 3.11"
   gem 'capistrano-passenger', '~> 0.2.0'
