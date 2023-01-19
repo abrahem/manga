@@ -4,10 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.4'
 
 gem 'active_skin'
-gem 'activeadmin'
+gem 'activeadmin', '>= 2.9.0'
 gem 'activeadmin_addons'
 gem 'activeadmin_reorderable'
-gem 'acts-as-taggable-on', '~> 6.0'
+gem 'acts-as-taggable-on', '~> 7.0', '>= 7.0.0'
 gem 'acts_as_list'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'carrierwave'
@@ -25,10 +25,10 @@ gem 'mini_magick'
 gem 'ordinare'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
-gem 'rails', '~> 5.2.3'
-gem 'rails-i18n'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.1'
+gem 'rails-i18n', '>= 6.0.0'
 gem 'railroady'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.1', '>= 5.1.0'
 gem 'sendgrid-ruby'
 gem 'sendgrid-actionmailer'
 gem 'tinymce-rails'
@@ -44,7 +44,7 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 3.7.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "capistrano", "~> 3.11"
   gem 'capistrano-passenger', '~> 0.2.0'
@@ -55,7 +55,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '>= 2.15'
+  gem 'capybara', '>= 3.29.0'
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
 end
